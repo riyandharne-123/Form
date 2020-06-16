@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+  
+<nav class="navbar navbar-expand-sm bg-dark justify-content-center fixed-top">
+  <ul class="navbar-nav">
+   <h1 style="color: #fff;font-weight: 600;">Input</h1>
+  </ul>
+</nav>
+<br>
+<br>
+<div class="container" style="padding-top: 100px">
+<div class="row">
+	<div class="col-md-5">
+		 <div class="form-group">
+  <label for="usr">Name:</label>
+  <input type="text" class="form-control" id="usr">
+</div>
+<div class="form-group">
+  <label for="pwd">Password:</label>
+  <input type="password" class="form-control" id="pwd">
+</div> 
+ <div class="form-group">
+  <label for="usr">phone:</label>
+  <input type="phone" class="form-control" id="usr">
+</div>
+<div class="form-group">
+  <label for="pwd">email:</label>
+  <input type="email" class="form-control" id="pwd">
+</div> 
+	</div>
+	<div class="col-md-5">
+		 <div class="form-group">
+  <label for="usr">Date:</label>
+  <input type="date" class="form-control" id="usr">
+</div>
+<div class="form-group">
+  <label for="pwd">qualification:  </label>
+   <div class="form-check-inline">
+  <label class="form-check-label">
+    <input type="radio" class="form-check-input" name="optradio">12th pass
+  </label>
+</div>
+<div class="form-check-inline">
+  <label class="form-check-label">
+    <input type="radio" class="form-check-input" name="optradio">Graduate
+  </label>
+</div>
+<div class="form-check-inline disabled">
+  <label class="form-check-label">
+    <input type="radio" class="form-check-input" name="optradio">Post Graduate
+  </label>
+</div> 
+</div> 
+ <div class="form-group">
+ <div class="form-group">
+  <label for="comment">Address:</label>
+  <textarea class="form-control" rows="2" id="comment"></textarea>
+</div> 
+</div>
+<div class="form-group">
+  <label for="pwd">City: </label>
+    <div class="multipleSelection"> 
+            <div class="selectBox" 
+                onclick="showCheckboxes()"> 
+                <select> 
+                    <option>Select options</option> 
+                </select> 
+                <div class="overSelect"></div> 
+            </div> 
+   <script> 
+        var show = true; 
+  
+        function showCheckboxes() { 
+            var checkboxes =  
+                document.getElementById("checkBoxes"); 
+  
+            if (show) { 
+                checkboxes.style.display = "block"; 
+                show = false; 
+            } else { 
+                checkboxes.style.display = "none"; 
+                show = true; 
+            } 
+        } 
+    </script> 
+    <style type="text/css">
+    	.multipleSelection { 
+            width: 300px; 
+            background-color: whitesmoke; 
+        } 
+  
+        .selectBox { 
+            position: relative; 
+        } 
+  
+        .selectBox select { 
+            width: 100%; 
+            font-weight: bold; 
+        } 
+  
+        .overSelect { 
+            position: absolute; 
+            left: 0; 
+            right: 0; 
+            top: 0; 
+            bottom: 0; 
+        } 
+  
+        #checkBoxes { 
+            display: none; 
+           
+        } 
+  
+        #checkBoxes label { 
+            display: block; 
+        } 
+         #checkBoxes label:hover { 
+            background-color: #4F615E; 
+        } 
+    </style>
+            <div id="checkBoxes" > 
+                <label for="first"> 
+                    <input type="checkbox" id="first" /> 
+                    checkBox1 
+                </label> 
+                  
+                <label for="second"> 
+                    <input type="checkbox" id="second"  /> 
+                    checkBox2 
+                </label> 
+                <label for="third"> 
+                    <input type="checkbox" id="third" /> 
+                    checkBox3 
+                </label> 
+                <label for="fourth"> 
+                    <input type="checkbox" id="fourth" /> 
+                    checkBox4 
+                </label> 
+            </div> 
+        </div> 
+</div> 
+	</div>
+</div>
+</div>
+</body>
+</html>
