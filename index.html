@@ -151,12 +151,12 @@
 								var address=document.getElementById("address").value;
 								var city=document.getElementById("city").value;
 								console.log(name,phone,email,date,qualification);
-							//	if(name||phone||email||date||qualification||address||city==null){
-							//		alert('pls enter all data ');
+								if(name||phone||email||date||qualification||address||city==null){
+									alert('pls enter all data ');
 								
 								 document.getElementById("tbody").innerHTML
 								  +="<tr>"+"<td>"+name+"</td>"+"<td>"+phone+"</td>"+"<td>"+email+"</td>"+"<td>"+date+"</td>"+"<td>"+qualification+"</td>"+"<td>"+address+"</td>"+"<td>"+city+"</td>"+"</tr>"; 
-							//	}
+								}
 		}
 
 		</script>
