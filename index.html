@@ -20,7 +20,7 @@
 	<div class="col-md-5">
 		 <div class="form-group">
   <label for="usr">Name:</label>
-  <input type="text" class="form-control" id="usr">
+  <input type="text" class="form-control" id="name">
 </div>
 <div class="form-group">
   <label for="pwd">Password:</label>
@@ -28,40 +28,30 @@
 </div> 
  <div class="form-group">
   <label for="usr">phone:</label>
-  <input type="phone" class="form-control" id="usr">
+  <input type="phone" class="form-control" id="phone">
 </div>
 <div class="form-group">
   <label for="pwd">email:</label>
-  <input type="email" class="form-control" id="pwd">
+  <input type="email" class="form-control" id="email">
 </div> 
 	</div>
 	<div class="col-md-5">
 		 <div class="form-group">
   <label for="usr">Date:</label>
-  <input type="date" class="form-control" id="usr">
+  <input type="date" class="form-control" id="date">
 </div>
-<div class="form-group">
-  <label for="pwd">qualification:  </label>
-   <div class="form-check-inline">
-  <label class="form-check-label">
-    <input type="radio" class="form-check-input" name="optradio">12th pass
-  </label>
-</div>
-<div class="form-check-inline">
-  <label class="form-check-label">
-    <input type="radio" class="form-check-input" name="optradio">Graduate
-  </label>
-</div>
-<div class="form-check-inline disabled">
-  <label class="form-check-label">
-    <input type="radio" class="form-check-input" name="optradio">Post Graduate
-  </label>
-</div> 
+ <div class="form-group">
+  <label for="sel1">Qualifications:</label>
+  <select class="form-control" id="qualification">
+    <option>12 th pass</option>
+    <option>Graduate</option>
+    <option>Post Graduate</option>
+  </select>
 </div> 
  <div class="form-group">
  <div class="form-group">
   <label for="comment">Address:</label>
-  <textarea class="form-control" rows="2" id="comment"></textarea>
+  <textarea class="form-control" rows="2" id="address"></textarea>
 </div> 
 </div>
 <div class="form-group">
@@ -127,27 +117,68 @@
     </style>
             <div id="checkBoxes" > 
                 <label for="first"> 
-                    <input type="checkbox" id="first" /> 
-                    checkBox1 
+                    <input type="checkbox" id="city" /> 
+                   Pune
                 </label> 
                   
                 <label for="second"> 
-                    <input type="checkbox" id="second"  /> 
-                    checkBox2 
+                    <input type="checkbox"   id="city"  /> 
+                Mumbai
                 </label> 
                 <label for="third"> 
-                    <input type="checkbox" id="third" /> 
-                    checkBox3 
+                    <input type="checkbox"   id="city" /> 
+                   Nagpur
                 </label> 
                 <label for="fourth"> 
-                    <input type="checkbox" id="fourth" /> 
-                    checkBox4 
+                    <input type="checkbox"  id="city"/> 
+                  Delhi
                 </label> 
             </div> 
         </div> 
 </div> 
 	</div>
 </div>
+<div class="row">
+	<div class="Col-md-3" style="margin: 0 auto;">
+		<button class="btn btn-success" style="width: 150px;" onClick="Submit();">Submit Data</button>
+		<script type="text/javascript">
+		function Submit(){
+				var name=document.getElementById("name").value;
+					var phone=document.getElementById("phone").value;
+						var email=document.getElementById("email").value;
+							var date=document.getElementById("date").value;
+								var qualification=document.getElementById("qualification").value;
+								var address=document.getElementById("address").value;
+								var city=document.getElementById("city").value;
+								console.log(name,phone,email,date,qualification);
+							//	if(name||phone||email||date||qualification||address||city==null){
+							//		alert('pls enter all data ');
+								
+								 document.getElementById("tbody").innerHTML
+								  +="<tr>"+"<td>"+name+"</td>"+"<td>"+phone+"</td>"+"<td>"+email+"</td>"+"<td>"+date+"</td>"+"<td>"+qualification+"</td>"+"<td>"+address+"</td>"+"<td>"+city+"</td>"+"</tr>"; 
+							//	}
+		}
+
+		</script>
+	</div>
+	</div>
+	<div>
+		<br>
+		<table class="table table-bordered" style="padding-top: ">
+			<thead>
+				<th>Name</th>
+				<th>Phone</th>
+				<th>Email</th>
+				<th>DATE</th>
+				<th>Qualifications</th>
+				<th>address</th>
+				<th>City</th>
+			</thead>
+			<tbody id="tbody">
+
+			</tbody>
+		</table>
+	</div>
 </div>
 </body>
 </html>
